@@ -4,8 +4,8 @@
 // @version      0.3
 // @description  try to take over the world!
 // @author       Mjumnito
-// @updateURL	https://github.com/mjumnito/bcWork-stuff.git
-// @downloadURL	https://github.com/mjumnito/bcWork-stuff.git
+// @updateURL	https://github.com/mjumnito/bcWork-stuff/raw/main/bcwork.js
+// @downloadURL	https://github.com/mjumnito/bcWork-stuff/raw/main/bcwork.js
 // @match        *://bowiecountytx-web.tdr.tylerhosting.cloud/web/document/*
 // @match        *://bowiecountytx-web.tylerhost.net/web/*
 // @require  http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
