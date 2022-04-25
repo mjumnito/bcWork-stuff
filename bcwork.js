@@ -1,11 +1,9 @@
 // ==UserScript==
 // @name         bowie stuff 2.0
 // @namespace    MJHighjack
-// @version      0.35
+// @version      0.3
 // @description  try to take over the world!
 // @author       Mjumnito
-// @updateURL	https://github.com/mjumnito/bcWork-stuff/raw/main/bcwork.js
-// @downloadURL	https://github.com/mjumnito/bcWork-stuff/raw/main/bcwork.js
 // @match        *://bowiecountytx-web.tdr.tylerhosting.cloud/web/document/*
 // @match        *://bowiecountytx-web.tylerhost.net/web/*
 // @require  http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js
