@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         bowie stuff 2.0
 // @namespace    MJHighjack
-// @version      0.3
+// @version      0.35
 // @description  try to take over the world!
 // @author       Mjumnito
 // @updateURL	https://github.com/mjumnito/bcWork-stuff/raw/main/bcwork.js
