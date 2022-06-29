@@ -17,7 +17,8 @@
 /* globals jQuery, $, waitForKeyElements */
 
 'use strict';
-waitForKeyElements("primaryPdfViewerDiv", BRunner, true);
+waitForKeyElements(".ss-pdfjs-viewer", BRunner, true);
+/* waitForKeyElements("primaryPdfViewerDiv", BRunner, true); */
 
 function BRunner(jNode) {
     var myNodelist = document.getElementsByClassName('ss-pdfjs-viewer')
