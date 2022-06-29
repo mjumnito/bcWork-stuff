@@ -26,7 +26,10 @@ function BRunner(jNode) {
     var mySource = document.getElementsByClassName('ss-pdfjs-viewer')[0].contentDocument.location
     console.log('Second Log');
     console.log(mySource)
+    var mySource2 = document.activeElement.getAttribute('src')
     var fixedName = mySource.href.replaceAll('allowDownload=false', 'allowDownload=true')
+    var fixedName2 = mySource2.replaceAll('allowDownload=false', 'allowDownload=true')
+    document.activeElement.setAttribute('src',fixedName2)
     console.log('Third Log');
     if (fixedName.includes("http")) {
         console.log(fixedName)
