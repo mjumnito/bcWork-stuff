@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         bowie stuff 2.0
 // @namespace    MJHighjack
-// @version      0.4.4
+// @version      0.4.5
 // @description  try to take over the world!
 // @author       Mjumnito
 // @match        https://bowiecountytx-web.tdr.tylerhosting.cloud/web/document/*
@@ -17,29 +17,29 @@
 /* globals jQuery, $, waitForKeyElements */
 
 'use strict';
-waitForKeyElements(".ss-pdfjs-viewer", BRunner, true);
-// waitForKeyElements("primaryPdfViewerDiv", BRunner, true); 
+waitForKeyElements(".ss-pdfjs-lviewer", BRunner, true);
+// waitForKeyElements("primaryPdfViewerDiv", BRunner, true);
 
 function BRunner(jNode) {
-    var myNodelist = document.getElementsByClassName('ss-pdfjs-viewer')
+    var myNodelist = document.getElementsByClassName('ss-pdfjs-lviewer')
     console.log('First Log: ' + myNodelist);
     console.log(myNodelist)
-    var mySource = document.getElementsByClassName('ss-pdfjs-viewer')[0].contentDocument.location
+    var mySource = document.getElementsByClassName('ss-pdfjs-lviewer')[0].src//contentDocument.location
     console.log('Second Log');
     console.log(mySource)
-    var mySource2 = document.activeElement.getAttribute('src')
-    var fixedName = mySource.href.replaceAll('allowDownload=false', 'allowDownload=true')
-    var fixedName2 = mySource2.replaceAll('allowDownload=false', 'allowDownload=true')
-    document.activeElement.setAttribute('src',fixedName2)
+    //var mySource2 = document.activeElement.getAttribute('src')
+    var fixedName = mySource.replace('allowDownload=false', 'allowDownload=true')
+    //var fixedName2 = mySource2.replace('allowDownload=false', 'allowDownload=true')
+    document.activeElement.setAttribute('src',fixedName)
     console.log('Third Log');
     if (fixedName.includes("http")) {
         console.log(fixedName)
         document.getElementsByClassName("ss-button-holder")[0].hidden = true
     } else {
         console.log("File didn't load correctly,reloading")
-        document.getElementById('.ss-pdfjs-viewer').contentDocument.location.reload(true)
+        document.getElementById('.ss-pdfjs-lviewer').contentDocument.location.reload(true)
     }
-    document.getElementsByClassName('ss-pdfjs-viewer')[0].contentDocument.location = fixedName
+    document.getElementsByClassName('ss-pdfjs-lviewer')[0].contentDocument.location = fixedName
     console.log('Name Fixed');
     console.log(fixedName)
 }
@@ -47,4 +47,3 @@ window.addEventListener("pdfViewer", function (event) {
     console.log("All resources finished loading!");
 
 });
-
