@@ -21,9 +21,9 @@ waitForKeyElements(".ss-pdfjs-lviewer", BRunner, true);
 // waitForKeyElements("primaryPdfViewerDiv", BRunner, true);
 
 function BRunner(jNode) {
-    var classToLookFor = "'ss-pdfjs-lviewer'"
+    var classToLookFor = 'ss-pdfjs-lviewer'
     var altclassToLookFor = "'.ss-pdfjs-lviewer'"
-    var myNodelist = document.getElementsByClassName(classToLookFor')
+    var myNodelist = document.getElementsByClassName(classToLookFor)
     console.log('First Log: ' + myNodelist);
     console.log(myNodelist)
     var mySource = document.getElementsByClassName(classToLookFor)[0].src//contentDocument.location
