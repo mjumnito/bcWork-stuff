@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         bowie stuff 2.0
 // @namespace    MJHighjack
-// @version      0.4.5
+// @version      0.4.6
 // @description  try to take over the world!
 // @author       Mjumnito
 // @match        https://bowiecountytx-web.tdr.tylerhosting.cloud/web/document/*
@@ -21,10 +21,12 @@ waitForKeyElements(".ss-pdfjs-lviewer", BRunner, true);
 // waitForKeyElements("primaryPdfViewerDiv", BRunner, true);
 
 function BRunner(jNode) {
-    var myNodelist = document.getElementsByClassName('ss-pdfjs-lviewer')
+    var classToLookFor = 'ss-pdfjs-lviewer'
+    var altclassToLookFor = '.ss-pdfjs-lviewer'
+    var myNodelist = document.getElementsByClassName(classToLookFor')
     console.log('First Log: ' + myNodelist);
     console.log(myNodelist)
-    var mySource = document.getElementsByClassName('ss-pdfjs-lviewer')[0].src//contentDocument.location
+    var mySource = document.getElementsByClassName(classToLookFor)[0].src//contentDocument.location
     console.log('Second Log');
     console.log(mySource)
     //var mySource2 = document.activeElement.getAttribute('src')
@@ -37,9 +39,9 @@ function BRunner(jNode) {
         document.getElementsByClassName("ss-button-holder")[0].hidden = true
     } else {
         console.log("File didn't load correctly,reloading")
-        document.getElementById('.ss-pdfjs-lviewer').contentDocument.location.reload(true)
+        document.getElementById(altclassToLookFor).contentDocument.location.reload(true)
     }
-    document.getElementsByClassName('ss-pdfjs-lviewer')[0].contentDocument.location = fixedName
+    document.getElementsByClassName(classToLookFor)[0].contentDocument.location = fixedName
     console.log('Name Fixed');
     console.log(fixedName)
 }
