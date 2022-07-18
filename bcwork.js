@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         bowie stuff 2.0
 // @namespace    MJHighjack
-// @version      0.4.6
+// @version      0.4.7
 // @description  try to take over the world!
 // @author       Mjumnito
 // @match        https://bowiecountytx-web.tdr.tylerhosting.cloud/web/document/*
@@ -21,8 +21,8 @@ waitForKeyElements(".ss-pdfjs-lviewer", BRunner, true);
 // waitForKeyElements("primaryPdfViewerDiv", BRunner, true);
 
 function BRunner(jNode) {
-    var classToLookFor = 'ss-pdfjs-lviewer'
-    var altclassToLookFor = '.ss-pdfjs-lviewer'
+    var classToLookFor = "'ss-pdfjs-lviewer'"
+    var altclassToLookFor = "'.ss-pdfjs-lviewer'"
     var myNodelist = document.getElementsByClassName(classToLookFor')
     console.log('First Log: ' + myNodelist);
     console.log(myNodelist)
