@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         bowie stuff 2.0
 // @namespace    MJHighjack
-// @version      0.4.8
+// @version      0.5
 // @description  try to take over the world!
 // @author       Mjumnito
 // @match        https://bowiecountytx-web.tdr.tylerhosting.cloud/web/document/*
